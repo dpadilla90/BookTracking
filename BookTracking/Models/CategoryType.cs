@@ -5,19 +5,14 @@ using BookTracking.Data;
 
 namespace BookTracking.Models
 {
-    public class Category
+    public class CategoryType
     {
         [Key]
         [Column(TypeName = "VARCHAR(255)")]
-        public string NameToken { get; set; }
-
-        [ForeignKey("CategoryTypeEntity")]
-        [Column(TypeName = "VARCHAR(255)")]
-        public string CategoryType { get; set; }
-        public CategoryType CategoryTypeEntity { get; set; }
+        public string Type { get; set; }
 
         [Required]
         [Column(TypeName = "VARCHAR(255)")]
-        public string Description { get; set; }
+        public string Name { get; set; }
     }
 }
