@@ -5,7 +5,7 @@ using BookTracking.Data;
 
 namespace BookTracking.Models
 {
-    public class Category
+   public class Category
     {
         [Key]
         [Column(TypeName = "VARCHAR(255)")]
@@ -19,5 +19,9 @@ namespace BookTracking.Models
         [Required]
         [Column(TypeName = "VARCHAR(255)")]
         public string Description { get; set; }
+
+        // Navigation property to represent books in this category
+        public virtual ICollection<Book> Books { get; set; } = new HashSet<Book>();
     }
+
 }

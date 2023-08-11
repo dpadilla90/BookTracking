@@ -14,5 +14,9 @@ namespace BookTracking.Models
         [Required]
         [Column(TypeName = "VARCHAR(255)")]
         public string Name { get; set; }
+
+        // Navigation property to represent categories of this type
+        public virtual ICollection<Category> Categories { get; set; } = new HashSet<Category>();
     }
+
 }
