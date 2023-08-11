@@ -21,7 +21,7 @@ namespace BookTracking.Models
         public string Description { get; set; }
 
         // Navigation property to represent books in this category
-        public virtual ICollection<Book> Books { get; set; } = new HashSet<Book>();
+        public ICollection<Book> Books { get; set; } 
     }
 
 }
